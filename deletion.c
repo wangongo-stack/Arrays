@@ -37,14 +37,12 @@ int main()
     }
 
     /* Shift elements to the left */
-
     for (i = position - 1; i < n - 1; i++)
     {
         arr[i] = arr[i + 1];
     }
 
     /* Reduce array size */
-
     n--;
 
     printf("\nArray after deletion:\n");
