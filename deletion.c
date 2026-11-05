@@ -1,26 +1,26 @@
 
 #include <stdio.h>
 
-#define MAX_SIZE 100
+#define size 100
 
 int main()
 {
-    int arr[MAX_SIZE];
+    int arr[size];
     int n, position;
     int i;
 
-    printf("========== ARRAY DELETION ==========\n");
+    printf("****ARRAY DELETION****\n");
 
     printf("Enter number of elements: ");
     scanf("%d", &n);
 
-    if (n < 1 || n > MAX_SIZE)
+    if (n < 1 || n > size)
     {
-        printf("Invalid array size!\n");
+        printf("Invalid size!\n");
         return 1;
     }
 
-    printf("Enter %d array elements:\n", n);
+    printf("Enter %d arrays:\n", n);
 
     for (i = 0; i < n; i++)
     {
@@ -36,16 +36,16 @@ int main()
         return 1;
     }
 
-    /* Shift elements to the left */
+    //Shift elements to the left
     for (i = position - 1; i < n - 1; i++)
     {
         arr[i] = arr[i + 1];
     }
 
-    /* Reduce array size */
+    //Reduce array size
     n--;
 
-    printf("\nArray after deletion:\n");
+    printf("\n****Array after deletion****\n");
 
     for (i = 0; i < n; i++)
     {
